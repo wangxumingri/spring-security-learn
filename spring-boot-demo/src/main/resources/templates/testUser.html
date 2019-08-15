@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".sub").click(function () {
+                $.ajax({
+                    type: "POST", //GET或POST,
+                    async:true, //默认设置为true，所有请求均为异步请求。
+                    url: "../loginTest",
+                    data: {
+                        username: $("#username").val(),
+                        content: $("#content").val()
+                    },
+                    dataType: "json", //xml、html、script、jsonp、text
+                    beforeSend:function(){
+                        alert(this.data)
+                    },
+                    complete:function(){},
+                    success: function(data) {
+                        alert(data)
+                    },
+                    error:function(){},
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+<h1 th:inline="text">test [[${#httpServletRequest.remoteUser}]]!</h1>
+<form >
+    <input type="text" id="username" />
+    <input type="text" id="content" />
+    <input type="button" class="sub" value="Sign Out"/>
+</form>
+
+</body>
+</html>
