@@ -19,6 +19,8 @@ public class WxMvcViewControllerConfig implements WebMvcConfigurer {
         registry.addViewController("/hello").setViewName("hello");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/logsuccess").setViewName("logsucessful");
+        registry.addViewController("/testName").setViewName("testName");
+
     }
 
 }
