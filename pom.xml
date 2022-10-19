@@ -22,7 +22,7 @@
         <mysql.version>5.1.37</mysql.version>
         <mybatis.version>3.4.5</mybatis.version>
         <spring.security.version>5.1.2.RELEASE</spring.security.version>
-        <jackson.version>2.9.5</jackson.version>
+        <jackson.version>2.13.4.1</jackson.version>
         <httpclient.version>4.5.1</httpclient.version>
         <gson.version>2.3.1</gson.version>
         <hibernate.version>5.0.7.Final</hibernate.version>
